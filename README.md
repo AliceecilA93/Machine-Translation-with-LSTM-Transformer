@@ -1,1 +1,1 @@
-# Machine-Translation-with-LSTM-Transformer
+# Machine-Translation-with-LSTM and Transformer
