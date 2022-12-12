@@ -61,35 +61,46 @@ def eng_preprocess(sent):
  4. Seq2Seq with Attention 모델 핸들링
  
    * Attention
+   
     RNN의 고질적인 문제인 Long-term problem로 인해 Attention 사용 
     ==> 입력 시퀀스를 동일한 비중으로 참고하는 것이 아닌, 예측 단어와 관련이 있는 입력 단어에 더욱 치중 ( Seq2Seq(LSTM) => Seq2Seq with Attention 변경) 
     
    * Bidirectional RNN(BiRNN)
-   ==> 두개의 순환층을 사용하여 하나는 앞에서부터, 하나는 뒤에서부터 단어를 읽어 각 time step마다 두 출력을 연결해 prediction을 출력하는 방법 사용 ( 이전 데이터와의 관계 + 이후 데이터와의 관계 모두 학습) 
+   
+    두개의 순환층을 사용하여 하나는 앞에서부터, 하나는 뒤에서부터 단어를 읽어 각 time step마다 두 출력을 연결해 prediction을 출력하는 방법 사용 ( 이전 데이터와의 관계 + 이후 데이터와의 관계 모두 학습) 
    
    * Add LSTM layers
-   ==> 2층, 3층, 4층, 5층 비교
+    
+    2층, 3층, 4층, 5층 비교
    
    * Optimizer
-   ==> Adam, Adadelta, AdamW 비교
+   
+    Adam, Adadelta, AdamW 비교
    
    * Num of hidden units
-   ==> 256, 512, 1024 비교
+   
+    256, 512, 1024 비교
    
    * Embedding Dimension 
-    ==> 64, 256, 512 비교 
+   
+    64, 256, 512 비교 
     
    * Dropout 0.2
-   ==> 셀 입력에 dropout 적용 
+   
+    셀 입력에 dropout 적용 
    
    * Recurrent Dropout 0.2 
-   ==> 현재 input에 영향을 받는 parameter에만 dropout 적용 
+    
+    현재 input에 영향을 받는 parameter에만 dropout 적용 
    
    
    5. Transformer 
-    * RNN 구조 대신 순서정보를 담기 위해서 Positional Encoding 단계 추가
+   
+   * RNN 구조 대신 순서정보를 담기 위해서 Positional Encoding 단계 추가
+    
     ( Embedding vector + Positional Encoding vector = Enbedding vector 생성 with 위치정보)
-    * Self-Attention 사용 
+   * Self-Attention 사용 
+    
     각 단어에 대해 나머지 단어들이 얼마나 유사한 지를 알려준다. 
     Q , K, V => 하나의 단어 Embedding vector x 가중치 행렬 
       1. Multi-Head Attention ( single * n개) 
