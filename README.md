@@ -97,12 +97,12 @@ def eng_preprocess(sent):
    5. Transformer 
    
    * RNN 구조 대신 순서정보를 담기 위해서 Positional Encoding 단계 추가
-    
     ( Embedding vector + Positional Encoding vector = Enbedding vector 생성 with 위치정보)
+   
    * Self-Attention 사용 
-    
     각 단어에 대해 나머지 단어들이 얼마나 유사한 지를 알려준다. 
     Q , K, V => 하나의 단어 Embedding vector x 가중치 행렬 
+    
       1. Multi-Head Attention ( single * n개) 
       : 서로 다른 관점에서 문장 내 각각의 단어 유사도 정보를 뽑아내기 위해서 
       2. Masked Multi-Head Attention 
@@ -139,9 +139,14 @@ def eng_preprocess(sent):
 ## 참조
 -Sutskever, Ilya, Oriol Vinyals, and Quoc V. Le. "Sequence to sequence learning with neural networks." Advances in neural information processing systems 27 (2014).
 https://doi.org/10.48550/arXiv.1409.3215
--Bahdanau, Dzmitry, Kyunghyun Cho, and Yoshua Bengio. "Neural machine translation by jointly learning to align and translate." Accepted at ICLR 2015 as oral presentation 
+
+-Bahdanau, Dzmitry, Kyunghyun Cho, and Yoshua Bengio. "Neural machine translation by jointly learning to align and translate." Accepted at ICLR 2015 as oral 
+presentation 
 https://doi.org/10.48550/arXiv.1409.0473
+
 -VASWANI, Ashish, et al. Attention is all you need. Advances in neural information processing systems, 2017, 30.
+
+
 
 
 
