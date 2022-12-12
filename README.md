@@ -60,23 +60,23 @@ def eng_preprocess(sent):
  
  4. Seq2Seq with Attention 모델 핸들링
  
-   *Attention
+   * Attention
     RNN의 고질적인 문제인 Long-term problem로 인해 Attention 사용 
     ==> 입력 시퀀스를 동일한 비중으로 참고하는 것이 아닌, 예측 단어와 관련이 있는 입력 단어에 더욱 치중 ( Seq2Seq(LSTM) => Seq2Seq with Attention 변경) 
     
-   *Bidirectional RNN(BiRNN)
+   * Bidirectional RNN(BiRNN)
    ==> 두개의 순환층을 사용하여 하나는 앞에서부터, 하나는 뒤에서부터 단어를 읽어 각 time step마다 두 출력을 연결해 prediction을 출력하는 방법 사용 ( 이전 데이터와의 관계 + 이후 데이터와의 관계 모두 학습) 
    
-   *Add LSTM layers
+   * Add LSTM layers
    ==> 2층, 3층, 4층, 5층 비교
    
-   *Optimizer
+   * Optimizer
    ==> Adam, Adadelta, AdamW 비교
    
-   *Num of hidden units
+   * Num of hidden units
    ==> 256, 512, 1024 비교
    
-   *Embedding Dimension 
+   * Embedding Dimension 
     ==> 64, 256, 512 비교 
     
    * Dropout 0.2
